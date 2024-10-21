@@ -4,6 +4,7 @@ import { CategoryComponent } from './category/category.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { InwardComponent } from './inward/inward.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProductComponent } from './product/product.component';
@@ -14,14 +15,15 @@ import { AuthGuard } from './_guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: LoginPageComponent, pathMatch: 'full' },
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'changePassword', component: ChangePasswordComponent },
-  {path: 'category', component: CategoryComponent },
-  {path: 'product', component: ProductComponent },
-  {path: 'employee', component: EmployeeComponent },
-  {path: 'inward', component: InwardComponent },
-  {path: 'report', component: ReportComponent },
-  {path: 'access-denied', component: AccessDeniedComponent },
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'changePassword', component: ChangePasswordComponent, canActivate: [AuthGuard] },
+  {path: 'category', component: CategoryComponent, canActivate: [AuthGuard] },
+  {path: 'product', component: ProductComponent, canActivate: [AuthGuard]},
+  {path: 'employee', component: EmployeeComponent, canActivate: [AuthGuard] },
+  {path: 'inward', component: InwardComponent, canActivate: [AuthGuard] },
+  {path: 'report', component: ReportComponent, canActivate: [AuthGuard] },
+  {path: 'access-denied', component: AccessDeniedComponent, canActivate: [AuthGuard]},
+  {path: 'forget-password', component: ForgetPasswordComponent},
   {path: '**', component: AccessDeniedComponent }
 ];
 

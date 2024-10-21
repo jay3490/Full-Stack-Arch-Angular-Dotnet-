@@ -18,6 +18,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { ChartsComponent } from './charts/charts.component';
 import { AccessDeniedComponent } from './_errors/access-denied/access-denied.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AccessDeniedComponent } from './_errors/access-denied/access-denied.com
     SystemComponent,
     ReportComponent,
     ChartsComponent,
-    AccessDeniedComponent
+    AccessDeniedComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
