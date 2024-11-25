@@ -8,26 +8,39 @@
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <style>
+            a.ex2:hover,
+            a.ex2:active {  
+                font-size: 150%;
+            }
+            a.ex2:active {
+  
+  color: red;
+}
+a:link, a:visited {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: red;  }
+        </style>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-4">
-                <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
-                <a class="nav-link active" aria-current="page" routerLink="/category">Category</a>
-                <a class="nav-link active" aria-current="page" routerLink="/product">Product</a>
-                <a class="nav-link active" aria-current="page" routerLink="/employee">Employee</a>
-                <a class="nav-link active" aria-current="page" routerLink="/inward">Inward</a>
-                <a class="nav-link active" aria-current="page" routerLink="/system">System</a>
-                <a class="nav-link active" aria-current="page" routerLink="/report">Report</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/category">Category</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/product">Product</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/employee">Employee</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/inward">Inward</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/system">System</a>
+                <a class="ex2 nav-link active" aria-current="page" routerLink="/report">Report</a>
             </div>
         </div>
 
         <!-- dropdown button -->
-        <div class="dropdown me-5">
+        <div class="ex2 dropdown me-5">
+            {{currentUserFullName}}
             <button class="dropbtn">{{currentUser}}</button>
             <div class="dropdown-content">
-              <a routerLink="/changePassword" routerLinkActive="active">Change Password</a>
-              <a>Logout</a>
+                <a routerLink="/changePassword" routerLinkActive="active">Change Password</a>
+                <a>Logout</a>
             </div>
-          </div>
+        </div>
     </div>
 </nav>
-

@@ -10,7 +10,8 @@ export class TopNavbarComponent {
   constructor(private router: Router)
   {}
   
-  currentUser: string = "Jay";
+  currentUserFullName = "Shubham"
+  currentUser: string = "S";
   firstInitial: string = this.currentUser[0];
 
 }
