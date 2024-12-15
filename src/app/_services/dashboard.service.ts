@@ -10,6 +10,7 @@ export class DashboardService {
   private baseUrl: string = "https://localhost:7096/api/controller/"
 
   getDashboardData(){
+    console.log(`${this.baseUrl}dashboard-details`)
     return this.http.get<any>(`${this.baseUrl}dashboard-details`)
   }
 }
